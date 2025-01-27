@@ -1,1 +1,1 @@
-Sitemap: https://blogsmithfree.cosmicthemes.com/sitemap-index.xml
+Sitemap: blogsmith-free.pages.dev/sitemap-index.xml
