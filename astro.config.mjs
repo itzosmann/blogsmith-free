@@ -1,16 +1,8 @@
-import { defineConfig } from "astro/config";
-
-import icon from "astro-icon"; // https://www.astroicon.dev/guides/upgrade/v1/
-import mdx from "@astrojs/mdx";
-import sitemap from "@astrojs/sitemap";
-import tailwind from "@astrojs/tailwind";
-import compress from "@playform/compress";
-import AutoImport from "astro-auto-import";
 import cloudflare from "@astrojs/cloudflare";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "blogsmith-free.pages.dev",
+  site: "https://blogsmith-free.pages.dev",
   output: "hybrid",
   adapter: netlify({
     imageCDN: false,
@@ -26,6 +18,14 @@ export default defineConfig({
   },
   // other config options
 });
+import { defineConfig } from "astro/config";
+
+import icon from "astro-icon"; // https://www.astroicon.dev/guides/upgrade/v1/
+import mdx from "@astrojs/mdx";
+import sitemap from "@astrojs/sitemap";
+import tailwind from "@astrojs/tailwind";
+import compress from "@playform/compress";
+import AutoImport from "astro-auto-import";
 
 // https://astro.build/config
 export default defineConfig({
