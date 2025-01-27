@@ -6,10 +6,30 @@ import sitemap from "@astrojs/sitemap";
 import tailwind from "@astrojs/tailwind";
 import compress from "@playform/compress";
 import AutoImport from "astro-auto-import";
+import cloudflare from "@astrojs/cloudflare";
 
 // https://astro.build/config
 export default defineConfig({
-	site: "https://blogsmithfree.cosmicthemes.com",
+  site: "blogsmith-free.pages.dev",
+  output: "hybrid",
+  adapter: netlify({
+    imageCDN: false,
+  }),
+  adapter: cloudflare({
+    imageService: "compile",
+  }),
+  // compatibility requirements for Cloudflare Pages
+  vite: {
+    ssr: {
+      external: ["stream", "util", "os", "fs", "svgo"],
+    },
+  },
+  // other config options
+});
+
+// https://astro.build/config
+export default defineConfig({
+	site: "https://blogsmith-free.pages.dev",
 	markdown: {
 		shikiConfig: {
 			theme: "dracula",
